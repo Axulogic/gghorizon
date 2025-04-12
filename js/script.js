@@ -1,7 +1,7 @@
 document.addEventListener('DOMContentLoaded', () => {
     const translations = {
         en: {
-            title: "Grand Guide: Horizon",
+            title: "Horizon",
             coming_soon: "We’re Building Something Amazing!",
             description: "Grand Guide: Horizon is currently in development. Stay tuned for an epic gaming experience.",
             days: "Days",
@@ -10,10 +10,15 @@ document.addEventListener('DOMContentLoaded', () => {
             seconds: "Seconds",
             release_date: "Estimated Launch: May 19, 2025",
             about: 'Grand Guide: Horizon is a project by <strong><a href="https://github.com/Axulogic" target="_blank" rel="noopener noreferrer">Axulogic, Inc.</a></strong>, led by programmer <strong><a href="https://github.com/linwaru" target="_blank" rel="noopener noreferrer">Linwaru</a></strong>. Development began on <strong>March 9, 2025</strong>.',
-            contact: 'Contact us: <a href="mailto:gghorizon.contact@gmail.com">gghorizon.contact@gmail.com</a>'
+            contact: 'Contact us: <a href="mailto:gghorizon.contact@gmail.com">gghorizon.contact@gmail.com</a>',
+            "404_title": "404 - Page Not Found",
+            "404_description": "Oops! It looks like the page you're looking for doesn't exist.",
+            error_title: "Something Went Wrong",
+            error_description: "We encountered an unexpected error. Please try again later.",
+            return_home: "Return to Homepage"
         },
         pt: {
-            title: "Grand Guide: Horizon",
+            title: "Horizon",
             coming_soon: "Estamos Construindo Algo Incrível!",
             description: "Grand Guide: Horizon está atualmente em desenvolvimento. Fique ligado para uma experiência de jogo épica.",
             days: "Dias",
@@ -22,7 +27,12 @@ document.addEventListener('DOMContentLoaded', () => {
             seconds: "Segundos",
             release_date: "Lançamento Estimado: 19 de Maio de 2025",
             about: 'Grand Guide: Horizon é um projeto da <strong><a href="https://github.com/Axulogic" target="_blank" rel="noopener noreferrer">Axulogic, Inc.</a></strong>, liderado pela programadora <strong><a href="https://github.com/linwaru" target="_blank" rel="noopener noreferrer">Linwaru</a></strong>. O desenvolvimento começou em <strong>9 de Março de 2025</strong>.',
-            contact: 'Entre em contato: <a href="mailto:gghorizon.contact@gmail.com">gghorizon.contact@gmail.com</a>'
+            contact: 'Entre em contato: <a href="mailto:gghorizon.contact@gmail.com">gghorizon.contact@gmail.com</a>',
+            "404_title": "404 - Página Não Encontrada",
+            "404_description": "Ops! Parece que a página que você está procurando não existe.",
+            error_title: "Algo Deu Errado",
+            error_description: "Encontramos um erro inesperado. Por favor, tente novamente mais tarde.",
+            return_home: "Voltar para a Página Inicial"
         }
     };    
 

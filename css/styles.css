@@ -408,3 +408,45 @@ body {
         font-size: 14px;
     }
 }
+
+/* Error Section */
+.error-section {
+    text-align: center;
+    max-width: 600px;
+}
+
+.error-section h1 {
+    font-family: 'Orbitron', sans-serif;
+    font-size: 36px;
+    font-weight: 700;
+    background: linear-gradient(90deg, #00FF88, #00CC70);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-shadow: 0 0 15px rgba(0, 255, 136, 0.7), 0 0 30px rgba(0, 255, 136, 0.5);
+    animation: glowPulse 2s infinite ease-in-out;
+    margin-bottom: 20px;
+}
+
+.error-section p {
+    font-size: 16px;
+    opacity: 0.8;
+    margin-bottom: 30px;
+}
+
+.return-btn {
+    display: inline-block;
+    background: none;
+    border: 1px solid #00FF88;
+    color: #00FF88;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 500;
+    transition: background 0.2s ease, color 0.2s ease;
+}
+
+.return-btn:hover {
+    background: #00FF88;
+    color: #121212;
+}
