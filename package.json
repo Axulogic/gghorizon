@@ -1,8 +1,12 @@
 {
   "name": "gghorizon.com",
   "version": "1.0.0",
-  "description": "",
+  "description": "![Grand Guide: Horizon](https://placehold.co/1000x80/png)  \r *Welcome to the \"Coming Soon\" page for Grand Guide: Horizon, a gaming dashboard project by Axulogic, Inc.*",
   "main": "index.js",
+  "dependencies": {
+    "node-fetch": "^3.3.2",
+    "ping": "^0.4.4"
+  },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -16,9 +20,5 @@
   "bugs": {
     "url": "https://github.com/Axulogic/gghorizon/issues"
   },
-  "homepage": "https://github.com/Axulogic/gghorizon#readme",
-  "dependencies": {
-    "node-fetch": "^2.7.0",
-    "ping": "^0.4.4"
-  }
+  "homepage": "https://github.com/Axulogic/gghorizon#readme"
 }
