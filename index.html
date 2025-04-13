@@ -116,7 +116,6 @@
         fetch('/status.json')
           .then(response => response.json())
           .then(data => {
-            // Exibe o status no frontend
             document.getElementById('status').innerHTML = `
               <p><strong>Status:</strong> ${data.server_status}</p>
               <p><strong>Ping:</strong> ${data.ping}</p>
@@ -129,6 +128,6 @@
             document.getElementById('status').innerHTML = 'Erro ao carregar status.';
           });
       </script>
-      
+
 </body>
 </html>
