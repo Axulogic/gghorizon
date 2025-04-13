@@ -4,8 +4,7 @@
   "description": "![Grand Guide: Horizon](https://placehold.co/1000x80/png)  \r *Welcome to the \"Coming Soon\" page for Grand Guide: Horizon, a gaming dashboard project by Axulogic, Inc.*",
   "main": "index.js",
   "dependencies": {
-    "node-fetch": "^2.7.0",
-    "ping": "^0.4.4"
+    "node-fetch": "^2.7.0"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"

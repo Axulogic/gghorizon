@@ -1,5 +1,4 @@
 const fetch = require('node-fetch');
-const ping = require('ping');
 
 exports.handler = async function (event, context) {
   try {
@@ -12,11 +11,7 @@ exports.handler = async function (event, context) {
     const latency = Date.now() - startTime;
     const isOnline = response.ok;
 
-    console.log('Fetch concluído. Iniciando ping...');
-    const pingResult = await ping.promise.probe('gghorizon.com');
-    const pingTime = pingResult.avg ? parseFloat(pingResult.avg) : null;
-
-    console.log('Ping concluído. Montando resposta...');
+    console.log('Fetch concluído. Montando resposta...');
     return {
       statusCode: 200,
       headers: {
@@ -26,7 +21,7 @@ exports.handler = async function (event, context) {
       body: JSON.stringify({
         status: isOnline ? 'online' : 'offline',
         latency: latency,
-        ping: pingTime,
+        ping: null,
         timestamp: new Date().toISOString(),
         message: isOnline ? 'Site está funcionando normalmente.' : 'Site pode estar enfrentando problemas.'
       })
