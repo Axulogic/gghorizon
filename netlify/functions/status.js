@@ -3,16 +3,20 @@ const ping = require('ping');
 
 exports.handler = async function (event, context) {
   try {
+    console.log('Iniciando verificação de status...');
     const siteUrl = 'https://gghorizon.com';
     const startTime = Date.now();
 
+    console.log(`Fazendo fetch para ${siteUrl}`);
     const response = await fetch(siteUrl, { method: 'HEAD', timeout: 5000 });
     const latency = Date.now() - startTime;
     const isOnline = response.ok;
 
+    console.log('Fetch concluído. Iniciando ping...');
     const pingResult = await ping.promise.probe('gghorizon.com');
     const pingTime = pingResult.avg ? parseFloat(pingResult.avg) : null;
 
+    console.log('Ping concluído. Montando resposta...');
     return {
       statusCode: 200,
       headers: {
@@ -28,7 +32,7 @@ exports.handler = async function (event, context) {
       })
     };
   } catch (error) {
-    console.error('Erro na função status:', error);
+    console.error('Erro na função status:', error.message, error.stack);
     return {
       statusCode: 500,
       headers: {
