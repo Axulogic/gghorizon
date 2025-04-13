@@ -1,0 +1,24 @@
+{
+  "name": "gghorizon.com",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Axulogic/gghorizon.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Axulogic/gghorizon/issues"
+  },
+  "homepage": "https://github.com/Axulogic/gghorizon#readme",
+  "dependencies": {
+    "node-fetch": "^2.7.0",
+    "ping": "^0.4.4"
+  }
+}
