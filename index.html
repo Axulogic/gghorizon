@@ -111,5 +111,24 @@
         </div>
     </footer>
     <script src="js/script.js"></script>
+
+    <script>
+        fetch('/status.json')
+          .then(response => response.json())
+          .then(data => {
+            // Exibe o status no frontend
+            document.getElementById('status').innerHTML = `
+              <p><strong>Status:</strong> ${data.server_status}</p>
+              <p><strong>Ping:</strong> ${data.ping}</p>
+              <p><strong>Latência:</strong> ${data.latency}</p>
+              <p><strong>Jogadores Online:</strong> ${data.players_online}</p>
+            `;
+          })
+          .catch(error => {
+            console.error('Erro ao buscar status:', error);
+            document.getElementById('status').innerHTML = 'Erro ao carregar status.';
+          });
+      </script>
+      
 </body>
 </html>
