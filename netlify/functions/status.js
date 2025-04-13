@@ -2,16 +2,15 @@ const fetch = require('node-fetch');
 
 exports.handler = async function (event, context) {
   try {
-    console.log('Iniciando verificação de status...');
-    const siteUrl = 'https://gghorizon.com';
+    const page = event.queryStringParameters?.page || '';
+    const siteUrl = `https://gghorizon.com${page.startsWith('/') ? page : '/' + page}`;
+    console.log(`Fazendo fetch para ${siteUrl}`);
     const startTime = Date.now();
 
-    console.log(`Fazendo fetch para ${siteUrl}`);
     const response = await fetch(siteUrl, { method: 'HEAD', timeout: 5000 });
     const latency = Date.now() - startTime;
     const isOnline = response.ok;
 
-    console.log('Fetch concluído. Montando resposta...');
     return {
       statusCode: 200,
       headers: {
@@ -22,8 +21,9 @@ exports.handler = async function (event, context) {
         status: isOnline ? 'online' : 'offline',
         latency: latency,
         ping: null,
+        page: page || 'homepage',
         timestamp: new Date().toISOString(),
-        message: isOnline ? 'Site está funcionando normalmente.' : 'Site pode estar enfrentando problemas.'
+        message: isOnline ? `Página ${page || 'homepage'} está funcionando.` : `Página ${page || 'homepage'} pode estar com problemas.`
       })
     };
   } catch (error) {
@@ -36,7 +36,7 @@ exports.handler = async function (event, context) {
       },
       body: JSON.stringify({
         status: 'error',
-        message: 'Erro ao verificar o status do site.',
+        message: 'Erro ao verificar o status.',
         error: error.message
       })
     };
