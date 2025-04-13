@@ -15,7 +15,10 @@ exports.handler = async function (event, context) {
 
     return {
       statusCode: 200,
-      headers: { 'Content-Type': 'application/json' },
+      headers: {
+        'Content-Type': 'application/json',
+        'Access-Control-Allow-Origin': '*'
+      },
       body: JSON.stringify({
         status: isOnline ? 'online' : 'offline',
         latency: latency,
@@ -28,7 +31,10 @@ exports.handler = async function (event, context) {
     console.error('Erro na função status:', error);
     return {
       statusCode: 500,
-      headers: { 'Content-Type': 'application/json' },
+      headers: {
+        'Content-Type': 'application/json',
+        'Access-Control-Allow-Origin': '*'
+      },
       body: JSON.stringify({
         status: 'error',
         message: 'Erro ao verificar o status do site.',
